@@ -10,6 +10,7 @@ collections:
     label: "服務項目管理"
     folder: "content/services"
     create: true
+    format: "json"
     fields:
       - {label: "服務名稱", name: "title", widget: "string"}
       - {label: "服務說明", name: "description", widget: "text"}
