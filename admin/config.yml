@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "services"
+    label: "服務項目管理"
+    folder: "content/services"
+    create: true
+    fields:
+      - {label: "服務名稱", name: "title", widget: "string"}
+      - {label: "服務說明", name: "description", widget: "text"}
+      - {label: "價格", name: "price", widget: "string"}
+      - {label: "詳細內容", name: "body", widget: "markdown"}
