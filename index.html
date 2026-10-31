@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>于大師・命理堪輿｜八字 紫微 風水 易經 姓名學</title>
+<meta name="description" content="于大師命理堪輿，提供八字、紫微斗數、三元納氣陽宅風水、易經卜卦、姓名學與擇日開運諮詢，線上預約。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23151820'/%3E%3Cpath d='M16 1a15 15 0 010 30A15 15 0 0016 1zm0 2a13 13 0 100 26V16z' fill='%23f6f1e5'/%3E%3Ccircle cx='16' cy='8' r='4' fill='%23b23a2e'/%3E%3Ccircle cx='16' cy='24' r='2.6' fill='%23f6f1e5'/%3E%3C/svg%3E">
+
+<style>
+  :root{
+    --ink:#151820;
+    --ink2:#1e222d;
+    --paper:#f6f1e5;
+    --paper2:#efe8d8;
+    --cinnabar:#b23a2e;
+    --cinnabar-d:#8f2b22;
+    --gold:#b98d4a;
+    --gold-l:#d9b56a;
+    --text:#2a2a2a;
+    --muted:#6b6355;
+    --line:rgba(185,141,74,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+    color:var(--text);
+    background:var(--paper);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(21,24,32,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;color:#f6f1e5;text-decoration:none}
+  .brand .mark{
+    width:34px;height:34px;border-radius:50%;flex:none;
+    background:conic-gradient(from 0deg,#f6f1e5 0 50%,var(--cinnabar) 50% 100%);
+    position:relative;box-shadow:inset 0 0 0 3px rgba(246,241,229,.85);
+  }
+  .brand .mark::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:12px;height:12px;border-radius:50%;background:#151820}
+  .brand .mark::before{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:4px;height:18px;border-radius:2px;background:var(--gold-l)}
+  .brand .name{font-size:20px;letter-spacing:3px;font-weight:600}
+  .brand .sub{font-size:11px;color:#b98d4a;letter-spacing:2px}
+  .nav-links{display:flex;gap:26px;list-style:none}
+  .nav-links a{color:#d8d2c2;text-decoration:none;font-size:15px;letter-spacing:1px;transition:color .2s}
+  .nav-links a:hover{color:var(--gold-l)}
+  .nav-cta{
+    background:var(--cinnabar);color:#fff;text-decoration:none;
+    padding:8px 18px;border-radius:4px;font-size:15px;letter-spacing:1px;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--cinnabar-d)}
+  .burger{display:none;background:none;border:none;color:#f6f1e5;font-size:26px;cursor:pointer}
+
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+    overflow:hidden;color:#f6f1e5;text-align:center;padding:0;
+  }
+  .hero-bg{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse at 28% 22%, rgba(185,141,74,.22), transparent 55%),
+      radial-gradient(ellipse at 76% 82%, rgba(178,58,46,.18), transparent 60%),
+      linear-gradient(160deg,#12151c 0%,#1e222d 48%,#14171f 100%);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(45deg,rgba(255,255,255,.012) 0 2px,transparent 2px 6px),
+      linear-gradient(180deg,rgba(21,24,32,.35),rgba(21,24,32,.75));
+  }
+  .hero-inner{position:relative;z-index:2;padding:120px 24px 80px;max-width:900px}
+  .hero-kicker{
+    font-size:14px;letter-spacing:6px;color:var(--gold-l);
+    display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;
+  }
+  .hero-kicker::before,.hero-kicker::after{content:"";width:44px;height:1px;background:var(--gold)}
+  .hero h1{
+    font-size:clamp(38px,6vw,68px);font-weight:600;letter-spacing:6px;line-height:1.25;
+    margin-bottom:22px;
+  }
+  .hero h1 .red{color:var(--cinnabar)}
+  .hero p{font-size:clamp(15px,2vw,19px);color:#e6e0d0;letter-spacing:2px;max-width:680px;margin:0 auto 38px}
+  .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:13px 32px;border-radius:4px;font-size:16px;letter-spacing:2px;
+    text-decoration:none;transition:all .2s;border:1px solid transparent;font-family:inherit;
+  }
+  .btn-solid{background:var(--cinnabar);color:#fff}
+  .btn-solid:hover{background:var(--cinnabar-d)}
+  .btn-ghost{border-color:var(--gold);color:var(--gold-l)}
+  .btn-ghost:hover{background:rgba(185,141,74,.15)}
+  .hero-scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--gold-l);font-size:13px;letter-spacing:2px;z-index:2;animation:float 2.4s infinite}
+  @keyframes float{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  section{padding:96px 0}
+  .sec-head{text-align:center;margin-bottom:56px}
+  .sec-zh{display:inline-block;font-size:14px;letter-spacing:6px;color:var(--cinnabar);margin-bottom:10px}
+  .sec-title{font-size:clamp(26px,3.4vw,36px);letter-spacing:4px;font-weight:600;color:var(--text)}
+  .sec-title em{font-style:normal;color:var(--cinnabar)}
+  .sec-sub{max-width:640px;margin:16px auto 0;color:var(--muted);font-size:15px}
+
+  .services{background:var(--paper)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .svc-card{
+    background:#fffdf7;border:1px solid var(--line);border-radius:8px;padding:32px 26px;
+    position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;
+  }
+  .svc-card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(21,24,32,.12)}
+  .svc-num{position:absolute;top:14px;right:18px;font-size:44px;color:rgba(178,58,46,.14);font-weight:600}
+  .svc-icon{width:52px;height:52px;margin-bottom:18px;color:var(--cinnabar)}
+  .svc-card h3{font-size:21px;letter-spacing:3px;margin-bottom:10px;color:#1f1f1f}
+  .svc-card p{font-size:14px;color:var(--muted);line-height:1.8}
+  .svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .svc-tags span{font-size:12px;color:var(--cinnabar);border:1px solid rgba(178,58,46,.3);border-radius:20px;padding:3px 12px;background:rgba(178,58,46,.05)}
+
+  .about{background:var(--paper2)}
+  .about-flex{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+  .about-img{
+    position:relative;border-radius:8px;overflow:hidden;
+    box-shadow:0 16px 40px rgba(21,24,32,.2);aspect-ratio:3/3.6;
+    background:var(--ink2);
+  }
+  .about-img img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top}
+  .about-img .seal{
+    position:absolute;right:16px;bottom:16px;width:64px;height:64px;border-radius:6px;
+    background:var(--cinnabar);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:15px;letter-spacing:2px;writing-mode:vertical-rl;box-shadow:0 4px 14px rgba(0,0,0,.3);
+  }
+  .about-text h2{font-size:clamp(24px,3vw,32px);letter-spacing:4px;margin-bottom:18px}
+  .about-text h2 span{color:var(--cinnabar)}
+  .about-text p{color:#3d3a33;margin-bottom:14px;font-size:15px}
+  .about-quote{
+    border-left:3px solid var(--cinnabar);padding:14px 20px;margin:22px 0;
+    background:rgba(178,58,46,.05);font-size:15px;color:#5a3f1b;
+  }
+  .about-quote b{color:var(--cinnabar)}
+
+  .pricing{background:var(--ink);color:var(--paper)}
+  .pricing .sec-title{color:var(--paper)}
+  .pricing .sec-sub{color:#b9b2a1}
+  .price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .price-card{
+    background:rgba(255,255,255,.04);border:1px solid rgba(185,141,74,.3);border-radius:8px;
+    padding:36px 28px;text-align:center;position:relative;
+  }
+  .price-card.featured{border-color:var(--gold);background:rgba(185,141,74,.1)}
+  .price-card .flag{
+    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    background:var(--cinnabar);color:#fff;font-size:12px;padding:3px 16px;border-radius:20px;letter-spacing:1px;
+  }
+  .price-card h3{font-size:20px;letter-spacing:3px;color:var(--gold-l);margin-bottom:8px}
+  .price-card .unit{font-size:13px;color:var(--gold);letter-spacing:2px;margin-bottom:20px}
+  .price-card ul{list-style:none;text-align:left;margin-bottom:24px}
+  .price-card li{font-size:14px;color:#d8d2c2;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.08);display:flex;align-items:baseline;gap:8px;line-height:1.5}
+  .price-card li:last-child{border-bottom:none}
+  .price-card li span{flex:1;color:#d8d2c2}
+  .price-card li b{color:#fff;font-weight:600;white-space:nowrap}
+  .price-card li small{font-size:12px;color:var(--gold)}
+  .price-card li.note{color:#b9b2a1;font-size:12px;font-style:italic}
+  .price-card .li-group{font-size:13px;color:var(--gold);letter-spacing:2px;margin:16px 0 4px;padding-top:12px;border-top:1px solid rgba(185,141,74,.2)}
+  .price-card .li-group:first-of-type{border-top:none;padding-top:0;margin-top:0}
+  .price-note{text-align:center;color:#9b9485;font-size:13px;margin-top:26px;letter-spacing:1px}
+
+  .process{background:var(--paper)}
+  .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+  .proc-step{position:relative;padding:30px 18px}
+  .proc-step::after{content:"";position:absolute;top:44px;right:-10px;width:20px;height:2px;background:var(--gold);opacity:.5}
+  .proc-step:last-child::after{display:none}
+  .proc-num{
+    width:56px;height:56px;margin:0 auto 16px;border-radius:50%;border:2px solid var(--cinnabar);
+    display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--cinnabar);font-weight:600;
+  }
+  .proc-step h3{font-size:17px;letter-spacing:2px;margin-bottom:8px}
+  .proc-step p{font-size:14px;color:var(--muted)}
+
+  .trust{background:var(--paper2)}
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .trust-card{
+    background:#fffdf7;border:1px solid var(--line);border-radius:8px;padding:32px 26px;
+    text-align:center;transition:transform .25s,box-shadow .25s;
+  }
+  .trust-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(21,24,32,.1)}
+  .trust-card .t-icon{width:46px;height:46px;margin:0 auto 16px;color:var(--cinnabar)}
+  .trust-card h3{font-size:18px;letter-spacing:2px;margin-bottom:10px;color:#1f1f1f}
+  .trust-card p{font-size:14px;color:var(--muted);line-height:1.8}
+
+  .booking{background:var(--ink);color:var(--paper)}
+  .booking .sec-title{color:var(--paper)}
+  .booking .sec-sub{color:#b9b2a1}
+  .form{
+    max-width:760px;margin:0 auto;background:rgba(255,255,255,.05);
+    border:1px solid rgba(185,141,74,.3);border-radius:10px;padding:40px 40px 32px;
+  }
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-size:14px;color:var(--gold-l);letter-spacing:1px;margin-bottom:8px}
+  .field input,.field select,.field textarea{
+    width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(185,141,74,.4);
+    border-radius:6px;padding:12px 14px;color:#f6f1e5;font-family:inherit;font-size:16px;outline:none;
+    transition:border-color .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold-l)}
+  .field select option{color:#2a2a2a}
+  .field textarea{min-height:110px;resize:vertical}
+  .form .btn-solid{width:100%;font-size:17px;padding:15px;cursor:pointer;border:none}
+  .form-hint{font-size:12px;color:#9b9485;text-align:center;margin-top:16px}
+  .form-hint a{color:var(--gold-l);text-decoration:underline}
+
+  .contact{background:var(--paper2)}
+  .contact-flex{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+  .contact-item{padding:30px 20px;background:#fffdf7;border-radius:8px;border:1px solid var(--line)}
+  .contact-item .ci-icon{width:40px;height:40px;margin:0 auto 12px;color:var(--cinnabar)}
+  .contact-item h3{font-size:16px;letter-spacing:2px;margin-bottom:6px}
+  .contact-item p{font-size:14px;color:var(--muted);letter-spacing:1px}
+  footer{background:var(--ink);color:#9b9485;padding:36px 0;text-align:center;font-size:13px;letter-spacing:2px}
+  footer .gold{color:var(--gold-l)}
+
+  .toast{
+    position:fixed;left:50%;bottom:36px;transform:translateX(-50%) translateY(120px);
+    background:var(--cinnabar);color:#fff;padding:14px 28px;border-radius:6px;
+    font-size:15px;letter-spacing:1px;z-index:999;opacity:0;transition:all .4s;box-shadow:0 8px 24px rgba(0,0,0,.3);
+    max-width:90vw;text-align:center;
+  }
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+  @media (min-width:768px) and (max-width:992px){
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .proc-grid{grid-template-columns:repeat(2,1fr)}
+    .proc-step::after{display:none}
+    .contact-flex{grid-template-columns:repeat(2,1fr)}
+    .trust-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:767px){
+    .nav-links{
+      position:fixed;top:64px;left:0;right:0;flex-direction:column;background:var(--ink2);
+      padding:20px 24px;gap:16px;display:none;border-bottom:1px solid var(--line);
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{font-size:16px}
+    .burger{display:block}
+    .nav-cta{display:none}
+    .svc-grid,.price-grid{grid-template-columns:1fr}
+    .proc-grid{grid-template-columns:1fr}
+    .proc-step::after{display:none}
+    .about-flex{grid-template-columns:1fr}
+    .about-img{aspect-ratio:3/2.6}
+    .form-row{grid-template-columns:1fr}
+    .contact-flex{grid-template-columns:1fr}
+    .trust-grid{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .hero{min-height:88vh}
+    .form{padding:28px 20px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark"></span>
+      <span>
+        <span class="name">于大師</span>
+        <div class="sub">命理堪輿</div>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">服務項目</a></li>
+        <li><a href="#about">關於老師</a></li>
+        <li><a href="#pricing">收費方案</a></li>
+        <li><a href="#booking">線上預約</a></li>
+        <li><a href="#contact">聯絡</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#booking">立即預約</a>
+    <button class="burger" id="burger" aria-label="選單" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-kicker">洞察天命 · 趨吉避凶</div>
+    <h1>于大師 <span class="red">命理堪輿</span></h1>
+    <p>八字論命・紫微斗數・三元納氣陽宅風水・易經卜卦・姓名開運<br>以數千年易學智慧，為您指引人生方向，助您看清時機、掌握進退</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#booking">線上預約諮詢</a>
+      <a class="btn btn-ghost" href="#services">探索服務</a>
+    </div>
+  </div>
+  <div class="hero-scroll">向下探索 ↓</div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-zh">六大服務</span>
+      <h2 class="sec-title">以易理通達人生，<em>助您趨吉避凶</em></h2>
+      <p class="sec-sub">融合八字、紫微、三元納氣風水、易經與姓名學，提供全方位命理諮詢</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <span class="svc-num">一</span>
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M12 3a9 9 0 010 18M12 3l-3 3M12 21l-3-3M12 3l3 3M12 21l3-3" stroke-linecap="round"/><circle cx="12" cy="12" r="2.2"/></svg>
+        <h3>八字命理</h3>
+        <p>排四柱、論五行旺衰，詳批先天格局與一生大運流年，掌握人生重要關卡的進退時機。</p>
+        <div class="svc-tags"><span>排盤論命</span><span>流年大運</span><span>姻緣事業</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">二</span>
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 010 18z" fill="currentColor" stroke="none" opacity=".25"/><path d="M12 7.5a4.5 4.5 0 014.5 4.5M12 16.5A4.5 4.5 0 007.5 12" stroke-linecap="round"/><circle cx="12" cy="12" r="1.6"/></svg>
+        <h3>紫微斗數</h3>
+        <p>依命盤星曜組合與宮位氣數，透析十二宮運勢，看出格局高低、貴人與財庫所在。</p>
+        <div class="svc-tags"><span>命盤解析</span><span>格局氣運</span><span>方位開運</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">三</span>
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l6-6M8 21l4-4M3 16l8-8 6 6-8 8H3v-6z" stroke-linejoin="round"/><path d="M14 10l4-4M16 8l2-2" stroke-linecap="round"/><circle cx="18" cy="6" r="1.5"/></svg>
+        <h3>三元納氣陽宅風水</h3>
+        <p>以三元納氣之法勘察居家與辦公空間的氣場布局，調整坐向、財位與格局，營造納氣聚財的安居環境。</p>
+        <div class="svc-tags"><span>三元納氣</span><span>居家旺財</span><span>辦公開運</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">四</span>
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="1.2"/></svg>
+        <h3>易經卜卦</h3>
+        <p>以文王卦六爻起卦，問事業、財運、訴訟、感情吉凶，於決策之前洞悉先機、趨避進退。</p>
+        <div class="svc-tags"><span>六爻問事</span><span>決策參考</span><span>財運感情</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">五</span>
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l8-4 8 4v4L12 20 4 11V7z" stroke-linejoin="round"/><path d="M4 7l8 4 8-4M12 11v9" stroke-linejoin="round"/></svg>
+        <h3>姓名學</h3>
+        <p>依生辰與筆畫五行推斷姓名吉凶，為新生兒取名、成人改名，補足八字所缺、納福開運。</p>
+        <div class="svc-tags"><span>取名命名</span><span>改名補運</span><span>筆畫五行</span></div>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">六</span>
+        <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke-linejoin="round"/><path d="M12 21c-2.5 0-4-3.5-4-9s1.5-9 4-9 4 3.5 4 9-1.5 9-4 9z" stroke-linejoin="round"/></svg>
+        <h3>綜合問事</h3>
+        <p>單一疑難雜症之綜合諮詢，結合多門術數交叉印證，一次解惑，看清前路。</p>
+        <div class="svc-tags"><span>交叉印證</span><span>疑難解答</span><span>全方位</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-flex">
+    <div class="about-img">
+      <img src="my-photo.jpg" alt="于大師老師法相">
+      <span class="seal">大師堪輿</span>
+    </div>
+    <div class="about-text">
+      <span class="sec-zh">關於老師</span>
+      <h2>于大師</h2>
+      <p>鑽研八字、紫微斗數、三元納氣陽宅風水、易經與姓名學數十載，以古法易理為本，務實解讀每一張命盤、每一支卦象，讓玄奧的術數貼近一般大眾。</p>
+      <p>長期為客戶排盤論命、勘察陽宅、開運佈局、擇日取名，於命理與風水領域積累深厚實務經驗；並將推廣五術命理、以易學助人視為一生使命，深受信賴。</p>
+      <div class="about-quote">
+        命理並非宿命，而是<b>讓您看清時機、掌握進退</b>。<br>
+        知其然，更知其所以然，方能趨吉避凶、順勢而為。
+      </div>
+      <a class="btn btn-solid" href="#booking">預約與老師結緣</a>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-zh">收費方案</span>
+      <h2 class="sec-title">選擇適合您的諮詢方案</h2>
+      <p class="sec-sub">收費透明，線上預約，依個人需求選擇最合適的服務</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>八字・紫微論命</h3>
+        <div class="unit">精批一生・大限・流年</div>
+        <div class="li-group">八字</div>
+        <ul>
+          <li><span>八字精批一生</span><b>NT$3,600</b></li>
+          <li><span>十年大運</span><b>NT$1,200</b></li>
+          <li><span>八字流年</span><b>NT$600</b><small>／年</small></li>
+        </ul>
+        <div class="li-group">紫微斗數</div>
+        <ul>
+          <li><span>紫微精批一生</span><b>NT$3,600</b></li>
+          <li><span>10年大限</span><b>NT$1,200</b></li>
+          <li><span>紫微流年</span><b>NT$600</b><small>／年</small></li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking">預約此項目</a>
+      </div>
+      <div class="price-card">
+        <h3>精準天運派姓名學</h3>
+        <div class="unit">取名・改名</div>
+        <ul>
+          <li><span>姓名鑑定（含大運流年）</span><b>NT$600</b></li>
+          <li><span>成人改名</span><b>NT$3,000</b></li>
+          <li><span>嬰兒命名</span><b>NT$3,000</b></li>
+          <li><span>文王卦問事</span><b>NT$1,200</b><small>／件</small></li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking">預約此項目</a>
+      </div>
+      <div class="price-card featured">
+        <span class="flag">現場服務</span>
+        <h3>三元納氣派陽宅堪輿</h3>
+        <div class="unit">居家・辦公・工廠</div>
+        <ul>
+          <li><span>公寓大廈</span><b>NT$7,000</b></li>
+          <li><span>透天厝</span><b>NT$10,000</b></li>
+          <li><span>辦公室／工廠</span><b>NT$12,000</b></li>
+          <li class="note">台中市以外縣市，另報價</li>
+        </ul>
+        <a class="btn btn-solid" href="#booking">預約堪輿</a>
+      </div>
+      <div class="price-card">
+        <h3>擇日與開運</h3>
+        <div class="unit">吉日・吉方・數字</div>
+        <ul>
+          <li><span>嫁娶／搬家／開光／安神／新官上任擇日</span><b>NT$2,000</b></li>
+          <li><span>奇門遁甲擇吉日吉時吉方</span><b>NT$3,000</b><small>／日</small></li>
+          <li><span>易經數字開運（手機、車牌）</span><b>NT$600</b></li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking">預約此項目</a>
+      </div>
+      <div class="price-card">
+        <h3>修行與積德</h3>
+        <div class="unit">傳授・指導</div>
+        <ul>
+          <li><span>準提法傳授、修行指導</span><b>NT$3,000</b></li>
+          <li><span>行善積德開運法</span><b>NT$3,000</b></li>
+          <li><span>八卦保命護身法</span><b>NT$3,000</b></li>
+          <li><span>金剛經迴向法教學指導</span><b>NT$1,000</b></li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking">預約此項目</a>
+      </div>
+      <div class="price-card">
+        <h3>法律諮詢</h3>
+        <div class="unit">專業服務</div>
+        <ul>
+          <li><span>法律諮詢服務</span><b>NT$3,000</b><small>／件</small></li>
+        </ul>
+        <a class="btn btn-ghost" href="#booking">預約此項目</a>
+      </div>
+    </div>
+    <p class="price-note">※ 收費依服務範圍與個案而定，台中市以外堪輿及特殊案件另報價，實際費用請於預約時與老師確認。</p>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-zh">預約流程</span>
+      <h2 class="sec-title">四個步驟，輕鬆結緣</h2>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step"><div class="proc-num">01</div><h3>填寫預約</h3><p>線上填表，選擇服務項目與時段</p></div>
+      <div class="proc-step"><div class="proc-num">02</div><h3>確認連絡</h3><p>老師確認時間與收費方式</p></div>
+      <div class="proc-step"><div class="proc-num">03</div><h3>線上諮詢</h3><p>視訊或語音進行詳批問事</p></div>
+      <div class="proc-step"><div class="proc-num">04</div><h3>取得解答</h3><p>收到完整論斷與開運建議</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="trust">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-zh">服務承諾</span>
+      <h2 class="sec-title">以古法易理，<em>助人趨吉避凶</em></h2>
+      <p class="sec-sub">數十年的鑽研與實務，只因一個信念：讓玄奧的術數，真正貼近您的生活</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <svg class="t-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke-linejoin="round"/><path d="M12 21c-2.5 0-4-3.5-4-9s1.5-9 4-9 4 3.5 4 9-1.5 9-4 9z" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>務實論斷</h3>
+        <p>不虛言、不誇大，以古法易理為本，每一張命盤、每一支卦象都認真推演，讓您看清前路。</p>
+      </div>
+      <div class="trust-card">
+        <svg class="t-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l8-4 8 4v4L12 20 4 11V7z" stroke-linejoin="round"/><path d="M4 7l8 4 8-4M12 11v9" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>廣受信賴</h3>
+        <p>長期為客戶排盤論命、堪輿擇日、開運佈局，以專業與誠信累積口碑，深受推崇。</p>
+      </div>
+      <div class="trust-card">
+        <svg class="t-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3" stroke-linecap="round"/><circle cx="12" cy="12" r="2.2"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>傳承使命</h3>
+        <p>以推廣五術命理、以易學助人為一生使命，願您知命而不認命，順勢而為、掌握進退。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-zh">線上預約</span>
+      <h2 class="sec-title">立即預約諮詢</h2>
+      <p class="sec-sub">填寫以下資訊，送出後將自動開啟您的 Email 程式寄信給老師</p>
+    </div>
+    <form class="form" id="bookingForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="name">您的姓名 *</label>
+          <input type="text" id="name" name="name" required placeholder="請輸入姓名">
+        </div>
+        <div class="field">
+          <label for="contact">聯絡方式（Line／電話）*</label>
+          <input type="text" id="contact" name="contact" required placeholder="請填寫可聯繫方式">
+        </div>
+      </div>
+      <div class="field">
+        <label for="service">諮詢服務 *</label>
+        <select id="service" name="service">
+          <option value="八字命理">八字命理</option>
+          <option value="紫微斗數">紫微斗數</option>
+          <option value="陽宅風水">陽宅風水</option>
+          <option value="易經卜卦">易經卜卦</option>
+          <option value="姓名學">姓名學</option>
+          <option value="全面詳批">全面詳批（八字＋紫微）</option>
+          <option value="綜合問事">綜合問事</option>
+          <option value="擇日開運">擇日開運</option>
+          <option value="修行指導">修行指導</option>
+          <option value="法律諮詢">法律諮詢</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="date">方便諮詢時段</label>
+          <input type="text" id="date" name="date" placeholder="例：平日晚上、假日白天">
+        </div>
+        <div class="field">
+          <label for="gender">性別／生辰（可選）</label>
+          <input type="text" id="gender" name="gender" placeholder="例：男，1963年10月2日">
+        </div>
+      </div>
+      <div class="field">
+        <label for="message">想詢問的問題</label>
+        <textarea id="message" name="message" placeholder="請簡述想諮詢的方向（事業／財運／感情／訴訟…）"></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid">送出預約</button>
+      <p class="form-hint">
+        送出後會開啟您的 Email 程式，請按「傳送」即可寄給老師。<br>
+        若無法寄信，請直接來電 <a href="tel:0935381733">0935-381-733</a> 或 Email <a href="mailto:stifenyu@yahoo.com.tw">stifenyu@yahoo.com.tw</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-zh">聯絡方式</span>
+      <h2 class="sec-title">與老師結緣</h2>
+    </div>
+    <div class="contact-flex">
+      <div class="contact-item">
+        <svg class="ci-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.08 4.18 2 2 0 014.06 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <h3>電話</h3>
+        <p><a href="tel:0935381733" style="color:inherit;text-decoration:none">0935-381-733</a></p>
+      </div>
+      <div class="contact-item">
+        <svg class="ci-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 6l-10 7L2 6M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+        <h3>Email</h3>
+        <p><a href="mailto:stifenyu@yahoo.com.tw" style="color:inherit;text-decoration:none">stifenyu@yahoo.com.tw</a></p>
+      </div>
+      <div class="contact-item">
+        <svg class="ci-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h8M8 8h8M8 16h5M10 3l1.5-1h3L16 3M12 3v3M3 21l1.5-1.5L6 21l1.5-1.5L9 21l1.5-1.5L12 21l1.5-1.5L15 21l1.5-1.5L18 21l1.5-1.5L21 21M5 21V6a2 2 0 012-2h10a2 2 0 012 2v15"/></svg>
+        <h3>服務地區</h3>
+        <p>線上諮詢 · 全台堪輿</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 <span class="gold">于大師・命理堪輿</span> · 八字 紫微 風水 易經 姓名學</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">已開啟 Email 程式，請按「傳送」寄出</div>
+
+<script>
+  (function(){
+    var burger=document.getElementById('burger');
+    var navLinks=document.getElementById('navLinks');
+    if(burger&&navLinks){
+      burger.addEventListener('click',function(){
+        var open=navLinks.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navLinks.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click',function(){
+          navLinks.classList.remove('open');
+          burger.setAttribute('aria-expanded','false');
+        });
+      });
+    }
+
+    var form=document.getElementById('bookingForm');
+    var toast=document.getElementById('toast');
+    if(form&&toast){
+      form.addEventListener('submit',function(e){
+        e.preventDefault();
+        var name=document.getElementById('name').value.trim();
+        var contact=document.getElementById('contact').value.trim();
+        var service=document.getElementById('service').value;
+        var date=document.getElementById('date').value.trim();
+        var gender=document.getElementById('gender').value.trim();
+        var message=document.getElementById('message').value.trim();
+
+        var body =
+          '姓名：' + name + '\n' +
+          '聯絡方式：' + contact + '\n' +
+          '諮詢服務：' + service + '\n' +
+          '方便時段：' + (date || '（未填）') + '\n' +
+          '性別／生辰：' + (gender || '（未填）') + '\n' +
+          '想詢問的問題：\n' + (message || '（未填）');
+
+        var subject = '網站預約諮詢 - ' + name + ' - ' + service;
+        var mailto = 'mailto:stifenyu@yahoo.com.tw'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+
+        window.location.href = mailto;
+
+        toast.classList.add('show');
+        setTimeout(function(){toast.classList.remove('show');},4000);
+      });
+    }
+  })();
+</script>
+</body>
+</html>
